@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <link rel="icon" type="image/x-icon" href="ac.png">
+
+    <title> AC cars  </title>
+
+</head>
+
+<style>
+
+    body{
+        display: flex;
+    }
+
+.side{
+    width: 372px;
+    position: relative;
+    border-right: 2px rgb(56, 56, 56) solid;
+    background-color: #eee;
+    height: 100%;
+    position: fixed;
+
+}
+.side::before{
+    content: "";
+    background-color: rgb(56, 56, 56);
+    width: 100%;
+    height: 21px;
+    position: absolute;
+    border-top-left-radius:5px;
+}
+.pimg{
+    width: 100%;
+    border-radius: 5px;
+}
+.pcontact{
+    border-bottom: 1px black solid;
+    width: 190px;
+}
+.pcontact::before{
+    content: ".";
+    padding: 5px;
+    padding-bottom: 8px;
+    font-size: 48px;
+}
+.contact p{
+    position: relative;
+    font-size: 18.5px;
+    padding-bottom: 47px;
+    margin-left: 19px;
+}
+.contact p::before{
+    left: -19px;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background-color: black;
+    border-radius: 50%;
+    margin: 3px;
+    display: inline-block;
+    position: absolute;
+    top: 4px;
+}
+.contact span{
+    font-size: 18.5px;
+    font-weight: bold
+}
+.contact a{
+    color: black;
+}
+.main{
+    width: calc(100%-372px);
+    margin-left: calc(372px + 9px);
+}
+.mimg{
+    background-image:url(Cool-Grey-Background.jpg);
+    height: 453px;
+}
+.mimg span{
+    display: inline-block;
+    transition-duration:.6s;
+    transform-origin: left;
+    font-size: 13px;
+    color: white;
+}
+.main > div{
+    border-bottom:3px solid black ;
+}
+.main > div div[class *="H"]{
+    display: flex;
+    justify-content: center;
+}
+.main > div div[class *="H"] h2{
+    border-top:12px solid rgb(56, 56, 56);
+    border-bottom:12px solid rgb(56, 56, 56) ;
+    border-left:10px solid rgb(56, 56, 56) ;
+    position: relative;
+    padding-left: 16px;
+    font-size: 27px;
+}
+.main > div div[class *="H"] h2::before{
+    content: "";
+    border-color: transparent transparent transparent rgb(56, 56, 56);
+    border-style: solid;
+    border-width: 14px;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    left: 0px;
+    top: 1px;
+}
+.main > div div[class *="H"] h2::after{
+    content: "";
+    border-color: rgb(56, 56, 56) transparent rgb(56, 56, 56) transparent;
+    border-style: solid;
+    border-width: 3px;
+    
+}
+.about{
+    margin-top: 10px;
+}
+.about p{
+    position: relative;
+    font-size: 25px;
+    padding-bottom: 47px;
+    margin-left: 19px;
+}
+.about span{
+    left: -19px;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background-color: black;
+    border-radius: 50%;
+    margin: 3px;
+    display: inline-block;
+    position: absolute;
+    top: 4px;
+}
+.info{
+    background-color: #eee;
+}
+.info p{
+    position: relative;
+    font-size: 21px;
+    padding-bottom: 30px;
+    margin-left: 19px;
+}
+.info p::before{
+    left: -19px;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background-color: black;
+    border-radius: 50%;
+    margin: 3px;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+}
+.info span{
+    font-size: 21px;
+    font-weight: bold
+}
+.skills > div{
+    margin-bottom: 10px;
+}
+.skills p{
+    position: relative;
+    font-size: 18px;
+    margin-left: 19px;
+    margin-bottom: 7px;
+}
+.skills p::before{
+    left: -19px;
+    content: "";
+    height: 6px;
+    width: 6px;
+    background-color: black;
+    border-radius: 50%;
+    margin: 3px;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+}
+.skills div div div[class *=g]{
+    height: 15px;
+    width: 80%;
+    margin-left: 33px;
+    margin-top: 15px;
+    border: .1px solid rgb(56, 56, 56);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.skills div div span{
+    height: 22px;
+    font-weight: bold;
+}
+.htmlrating{
+    background: linear-gradient(to right, blue 90.1%, antiquewhite 10%);
+}
+.cssrating{
+    background: linear-gradient(to right, blue 90.1%, antiquewhite 10%);
+}
+.javascriptrating{
+    background: linear-gradient(to right, blue 85.1%, antiquewhite 10%);
+}
+.typescriptrating{
+    background: linear-gradient(to right, blue 80.1%, antiquewhite 10%);
+}
+.bootstraprating{
+    background-color: antiquewhite;
+}
+</style>
+
+<body>
+
+<div class="side">
+    <div class="name">
+        <h1 class="name"></h1>
+    </div>
+    <div class="img">
+        <img src="img.jpg" alt="persona image" class="pimg">
+    </div>
+    <div class="contact">
+        <h2 class="pcontact">
+          contact me
+        </h2>
+        <p class="fb"><span>facebook: </span><a href="https://www.facebook.com/asmaa.salah.545?mibextid=LQQJ4d">Abdelrahman mohamed</a></p>
+        <p class="lin"><span>linkedin: </span><a href="https://www.linkedin.com/in/abdelrahman-mohamed-053047274">Abdelrahman mohamed</a></p>
+        <p class="mail"><span>Mail: </span>abdelrahmanmohamed2304@gmail.com</p>
+        <p class="number"><span>Number: </span>01551013134</p>
+    </div>
+</div>
+
+<div class="main" id="main">
+    <div class="mimg" id="mimg">
+        <span class="name" id="name">Abdelrahman Mohamed/Frond-end developer</span>
+    </div> 
+    <div class="about">
+        <div class="aboutH">
+            <h2>About</h2>
+        </div>
+        <div class="aboutsec">
+            <p><span></span>I am a student at the Faculty of Engineering at Ain Shams University , one of the most prestigious institutions in Egypt, i am in my third year and with grade A-. My passion for problem-solving and creating
+                user-friendly interfaces has led me to pursue a career as a Front-End Developer.</p>
+    
+            <p><span></span>I have developed proficiency in various programming languages and tools such as HTML, CSS, JavaScript, and TypeScript. I am always eager to learn new technologies and improve
+                my skills. I believe that a well-designed user interface can have a significant impact on the success of an application.</p>
+    
+            <p><span></span>In addition to my technical skills, I am a team player who values collaboration and communication. I am known for my attention to detail and my ability to manage multiple 
+                tasks efficiently.</p>
+            
+        </div>
+    </div>
+    <div class="info">
+        <div class="infoH">
+            <h2>Personal info</h2>
+        </div>
+        <div class="infosec">
+            <p class="name"><span>Name: </span>Abdelrahman Mohamed</p>
+            <p class="age"><span>Age: </span>19</p>
+            <p class="university"><span>University: </span>Ain-shams university engineering faculty</p>
+            <p class="address"><span>Address: </span>Egypt/Cairo</p>
+        </div>
+    </div>
+    <div class="skills">
+        <div class="skillsH">
+            <h2>Skills</h2>
+        </div>
+        <div class="skillssec">
+            <div class="html">
+                <p>HTML</p>
+                <div class="htmlrating"><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span></div>
+            </div>
+            <div class="css">
+                <p>CSS</p>
+                <div class="cssrating"><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span></div>
+            </div>
+            <div class="javascript">
+                <p>JavaScript</p>
+                <div class="javascriptrating"><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span></div>
+            </div>
+            <div class="typescript">
+                <p>TypeScript</p>
+                <div class="typescriptrating"><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span></div>
+            </div>
+            <div class="bootstrap">
+                <p>Bootstrap</p>
+                <div class="bootstraprating"><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span></div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="pro">
+        <div class="proH">
+            <h2>Projects</h2>
+        </div>
+        <div class="prosec">
+            <div class="ac">
+
+            </div>
+        </div>
+    </div> -->
+</div>
+    
+</body>
+
+<script>
+
+let b = window.innerWidth
+let c = window.innerHeight
+let s = document.getElementById("mimg");
+let n = document.getElementById("name");
+let w = s.clientWidth;
+let h = s.clientHeight;
+let wn = n.clientWidth;
+let hn = n.clientHeight;
+
+if (b >= 1000){
+function right(ee , w , h , wn , hn) { ee.style.transform =  `translate(${w-hn}px) rotate(90deg)`
+ee.style.fontSize = "17px"};
+function down(ee , w , h , wn , hn){ee.style.transform = `translate(${w}px, ${h-hn-15}px) rotate(180deg)`
+ee.style.fontSize = "20px"};
+function left(ee , w , h , wn , hn){ee.style.transform = `translate( 15px , calc(${h}px - ${hn}px)) rotate(270deg)`
+ee.style.fontSize = "23px"};
+function up(ee , w , h , wn , hn){ee.style.transform = `translate(15px , calc(calc(${h}px / 2) - ${hn}px)) rotate(360deg)`
+ee.style.fontSize = "26px"};
+function center(ee , w , h , wn , hn){ee.style.transform = `translate(calc(${(w/2)-wn}px) , calc(calc(${h}px / 2) - ${hn}px)) rotate(360deg)`
+ee.style.fontSize = "31px"};
+}else{
+function right(ee , w , h , wn , hn) { ee.style.transform =  `translate(${w-hn}px) rotate(90deg)`
+ee.style.fontSize = "13px"};
+function down(ee , w , h , wn , hn){ee.style.transform = `translate(${w}px, ${h-hn-15}px) rotate(180deg)`
+ee.style.fontSize = "27px"};
+function left(ee , w , h , wn , hn){ee.style.transform = `translate( 15px , calc(${h}px - ${hn}px)) rotate(270deg)`
+ee.style.fontSize = "20px"};
+function up(ee , w , h , wn , hn){ee.style.transform = `translate(15px , calc(calc(${h}px / 2) - ${hn}px)) rotate(360deg)`
+ee.style.fontSize = "22px"};
+function center(ee , w , h , wn , hn){ee.style.transform = `translate(calc(${(w/2)-wn}px) , calc(calc(${h}px / 2) - ${hn}px)) rotate(360deg)`
+ee.style.fontSize = "25px"};
+}
+
+setTimeout(() => {right(n , w , h, wn, hn)}
+
+, 500);
+
+setTimeout(() => {down(n , w , h, wn, hn)}
+
+, 990);
+
+setTimeout(() => {left(n , w , h, wn, hn)}
+
+, 1500);
+
+setTimeout(() => {up(n , w , h, wn, hn)}
+
+, 2150);
+
+setTimeout(() => {center(n , w , h, wn, hn)}
+
+, 2700);
+
+</script>
