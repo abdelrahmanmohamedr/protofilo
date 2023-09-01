@@ -11,9 +11,10 @@
 
 <style>
 
-    body{
-        display: flex;
-    }
+.con{
+    display: flex;
+    position: relative;
+}
 
 .side{
     width: 372px;
@@ -22,7 +23,7 @@
     background-color: #eee;
     height: 100%;
     position: fixed;
-
+    
 }
 .side::before{
     content: "";
@@ -72,7 +73,7 @@
     color: black;
 }
 .main{
-    width: calc(100%-372px);
+    width: calc(100% - 372px);
     margin-left: calc(372px + 9px);
 }
 .mimg{
@@ -86,7 +87,7 @@
     font-size: 13px;
     color: white;
 }
-.main > div{
+.main > div:not(.pro){
     border-bottom:3px solid black ;
 }
 .main > div div[class *="H"]{
@@ -203,25 +204,28 @@
 }
 .htmlrating{
     background: linear-gradient(to right, blue 90.1%, antiquewhite 10%);
+    margin-top: 10px;
 }
 .cssrating{
     background: linear-gradient(to right, blue 90.1%, antiquewhite 10%);
+    margin-top: 10px;
 }
 .javascriptrating{
     background: linear-gradient(to right, blue 85.1%, antiquewhite 10%);
+    margin-top: 10px;
 }
 .typescriptrating{
     background: linear-gradient(to right, blue 80.1%, antiquewhite 10%);
+    margin-top: 10px;
 }
 .bootstraprating{
-    background-color: antiquewhite;
+    background: linear-gradient(to right, blue 100%, antiquewhite 0%);
+    margin-top: 10px;
 }
 .ooprating{
     background: linear-gradient(to right, blue 70.1%, antiquewhite 30%);
-}
-.cvsec{
-    display: flex;
-    justify-content: center;
+    margin-bottom: 51px;
+    margin-top: 10px;
 }
 .cva{
     color: black;
@@ -230,8 +234,70 @@
     box-shadow: 3px 3px rgb(56, 56, 56);
     padding: 5px;
 }
+.pro{
+    background-color: #eee;
+    padding-bottom: 1px;
+}
+.prosec{
+    display: grid;
+    grid-template-columns: repeat(3 ,250px);
+    justify-content: space-evenly;
+    margin-top: 30px;
+    row-gap: 5px;
+    margin-bottom: 51px;
+}
+.prosec div {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   align-content: space-between;
+}
+.prosec div img{
+    width: 250px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+.prosec div a{
+    font-size: 21px;
+    color: black;
+}
+.fotter{
+    width:100%;
+    background-color: #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+    border-top:3px solid black ;
+}
+.fotter p{
+    font-size: 21px;
+    font-weight: bold;
+    margin-right: 50px;
+    margin-left: 40px;
+}
+.up{
+
+position: fixed;
+bottom: 15px;
+right: 15px;
+margin: 0px;
+padding: 10px;
+background-color: rgba(95, 95, 241, 0.5);
+color: white;
+font-weight: bold;
+cursor: pointer;
+font-size: 25px;
+caret-color: transparent;
+}
+
+.up:hover{
+
+    background-color:rgba(95, 95, 241) ;
+    transition: .5s;
+}
 @media(max-width : 1000px){
-    .side{
+.side{
     width: 260px;
 }
 .contact p{
@@ -245,37 +311,62 @@
     font-weight: bold
 }
 .main{
-    width: calc(100%-263px);
-    margin-left: calc(263px + 9px);
+    width: calc(100% - 260px);
+    margin-left: calc(260px + 9px);
+}
+.fotter{
+    position: relative;
+    z-index: 1000;
+}
+.prosec{
+    display: grid;
+    grid-template-columns: repeat(3 ,210px);
+    justify-content: space-evenly;
+    margin-top: 30px;
+    row-gap: 5px;
+    margin-bottom: 51px;
+}
+.prosec div img{
+    width: 210px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+.prosec div a{
+    font-size: 21px;
+    color: black;
+}
+.up{
+font-size: 40px;
+z-index: 1001;
 }
 }
 </style>
 
 <body>
-
-<div class="side">
-    <div class="name">
-        <h1 class="name"></h1>
-    </div>
-    <div class="img">
-        <img src="img.jpg" alt="persona image" class="pimg">
-    </div>
-    <div class="contact">
-        <h2 class="pcontact">
-          contact me
-        </h2>
-        <p class="fb"><span>facebook: </span><a href="https://www.facebook.com/asmaa.salah.545?mibextid=LQQJ4d">Abdelrahman mohamed</a></p>
-        <p class="lin"><span>linkedin: </span><a href="https://www.linkedin.com/in/abdelrahman-mohamed-053047274">Abdelrahman mohamed</a></p>
-        <p class="mail"><span>Mail: </span><a href="mailto:abdelrahmanmohamed2304@gmail.com">Abdelrahman mohamed</a></p>
+<div class="con">
+    <div class="side" id="side">
+        <div class="name">
+         <h1 class="name"></h1>
+        </div>
+        <div class="img">
+          <img src="img.jpg" alt="persona image" class="pimg">
+        </div>
+        <div class="contact">
+            <h2 class="pcontact">
+            contact me
+            </h2>
+        <p class="fb"><span>facebook: </span><a href="https://www.facebook.com/asmaa.salah.545?mibextid=LQQJ4d" target="_blank">Abdelrahman mohamed</a></p>
+        <p class="lin"><span>linkedin: </span><a href="https://www.linkedin.com/in/abdelrahman-mohamed-053047274" target="_blank">Abdelrahman mohamed</a></p>
+        <p class="mail"><span>Mail: </span><a href="mailto:abdelrahmanmohamed2304@gmail.com" target="_blank">Abdelrahman mohamed</a></p>
         <p class="number"><span>Number: </span>01551013134</p>
     </div>
-</div>
+    </div>
 
-<div class="main" id="main">
-    <div class="mimg" id="mimg">
-        <span class="name" id="name">Abdelrahman Mohamed/Frond-end developer</span>
-    </div> 
-    <div class="about">
+    <div class="main" id="main">
+        <div class="mimg" id="mimg">
+          <span class="name" id="name">Abdelrahman Mohamed/Frond-end developer</span>
+        </div> 
+     <div class="about">
         <div class="aboutH">
             <h2>About</h2>
         </div>
@@ -333,26 +424,36 @@
             </div>
         </div>
     </div>
-    <!-- <div class="cv">
-        <div class="cvH">
-            <h2>Resume</h2>
-        </div>
-        <div class="cvsec">
-            <a href="cv .pdf" class="cva"> My Resume</a>
-        </div>
-    </div> -->
-    <!-- <div class="pro">
+    <div class="pro">
         <div class="proH">
             <h2>Projects</h2>
         </div>
         <div class="prosec">
             <div class="ac">
-
+                <a href="https://abdelrahmanmohamedr.github.io/AC_cars/AC_CARS_INTO" target="_blank"><img src="ac.png" alt="AC icon"></a>
+                <a href="https://abdelrahmanmohamedr.github.io/AC_cars/AC_CARS_INTO" target="_blank">AC PROJECT</a>
+            </div>
+            <div class="aoasu">
+               <a href="https://abdelrahmanmohamedr.github.io/first-project/aoasu%20about" target="_blank"><img src="aoasu.png" alt="AOASU icon"></a> 
+                <a href="https://abdelrahmanmohamedr.github.io/first-project/aoasu%20about" target="_blank">AOASU PROJECT</a>
+            </div>
+            <div class="protofilo">
+                <a href="https://abdelrahmanmohamedr.github.io/protofilo/protofillo" target="_blank"><img src="img.jpg" alt="protofilo icon"></a>
+                <a href="https://abdelrahmanmohamedr.github.io/protofilo/protofillo" target="_blank">PROTOFILO PROJECT</a>
             </div>
         </div>
-    </div> -->
+    </div>
+    </div>
+</div>
+<div class="fotter" id="fotter">
+    <p>Made by Abdelrahman mohamed 2023</p>
+    <p><a href="cv .pdf" class="cva" target="_blank">My Resume</a></p>
 </div>
     
+<div class="up" id="up">
+    <span> ↑ </span>
+</div>
+
 </body>
 
 <script>
@@ -366,14 +467,15 @@ let h = s.clientHeight;
 let wn = n.clientWidth;
 let hn = n.clientHeight;
 
-if (b >= 1000){
+
+if (b >= 1050){
 function right(ee , w , h , wn , hn) { ee.style.transform =  `translate(${w-hn}px) rotate(90deg)`
 ee.style.fontSize = "17px"};
 function down(ee , w , h , wn , hn){ee.style.transform = `translate(${w}px, ${h-hn-15}px) rotate(180deg)`
 ee.style.fontSize = "20px"};
 function left(ee , w , h , wn , hn){ee.style.transform = `translate( 15px , calc(${h}px - ${hn}px)) rotate(270deg)`
 ee.style.fontSize = "23px"};
-function up(ee , w , h , wn , hn){ee.style.transform = `translate(15px , calc(calc(${h}px / 2) - ${hn}px)) rotate(360deg)`
+function upp(ee , w , h , wn , hn){ee.style.transform = `translate(15px , calc(calc(${h}px / 2) - ${hn}px)) rotate(360deg)`
 ee.style.fontSize = "26px"};
 function center(ee , w , h , wn , hn){ee.style.transform = `translate(calc(${(w/2)-wn}px) , calc(calc(${h}px / 2) - ${hn}px)) rotate(360deg)`
 ee.style.fontSize = "31px"};
@@ -384,10 +486,10 @@ function down(ee , w , h , wn , hn){ee.style.transform = `translate(${w}px, ${h-
 ee.style.fontSize = "27px"};
 function left(ee , w , h , wn , hn){ee.style.transform = `translate( 15px , calc(${h}px - ${hn}px)) rotate(270deg)`
 ee.style.fontSize = "20px"};
-function up(ee , w , h , wn , hn){ee.style.transform = `translate(15px , calc(calc(${h}px / 2) - ${hn}px)) rotate(360deg)`
+function upp(ee , w , h , wn , hn){ee.style.transform = `translate(15px , calc(calc(${h}px / 2) - ${hn}px)) rotate(360deg)`
 ee.style.fontSize = "22px"};
 function center(ee , w , h , wn , hn){ee.style.transform = `translate(calc(${(w/2)-wn}px) , calc(calc(${h}px / 2) - ${hn}px)) rotate(360deg)`
-ee.style.fontSize = "25px"};
+ee.style.fontSize = "26px"};
 }
 
 setTimeout(() => {right(n , w , h, wn, hn)}
@@ -402,12 +504,65 @@ setTimeout(() => {left(n , w , h, wn, hn)}
 
 , 1500);
 
-setTimeout(() => {up(n , w , h, wn, hn)}
+setTimeout(() => {upp(n , w , h, wn, hn)}
 
 , 2150);
 
 setTimeout(() => {center(n , w , h, wn, hn)}
 
 , 2700);
+
+// _______________________________________________________________________________________________________________________________________________________________________________
+
+let side = document.getElementById("side");
+let mh = document.getElementById("main").scrollHeight;
+let fh = document.getElementById("fotter").scrollHeight;
+let up = document.getElementById("up");
+up.style.display = 'none'
+
+window.onscroll = function(){
+        if(window.scrollY >= 1507.524658203125){
+         side.style.cssText = `position : absolute;
+         bottom:0;
+         height:969px`
+        }else{
+         side.style.cssText = `position : fixed;`
+        }
+        if (b >= 1030){ 
+        if(window.scrollY < 400){
+        up.style = `display : none`;
+        }else {
+        up.setAttribute("style" , `
+        display : inline;
+        transition-duration: 3s; 
+        ` )
+        }
+        }
+        else{
+        if(window.scrollY < 50){
+        up.style = `display : none`;
+        }else {
+        up.setAttribute("style" , `
+        display : inline;
+        transition-duration: 3s; 
+        ` )
+        }
+        }
+}
+//_______________________________________________________________________________________________________________________________________________________________________________
+
+up.onclick = function(){
+
+    window.scrollTo({
+
+        top : 0,
+
+        behavior : "smooth"
+        
+    })
+}
+
+
+
 
 </script>
