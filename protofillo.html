@@ -204,22 +204,27 @@
 }
 .htmlrating{
     background: linear-gradient(to right, blue 90.1%, antiquewhite 10%);
+    margin-bottom: 51px;
     margin-top: 10px;
 }
 .cssrating{
     background: linear-gradient(to right, blue 90.1%, antiquewhite 10%);
+    margin-bottom: 51px;
     margin-top: 10px;
 }
 .javascriptrating{
     background: linear-gradient(to right, blue 85.1%, antiquewhite 10%);
+    margin-bottom: 51px;
     margin-top: 10px;
 }
 .typescriptrating{
     background: linear-gradient(to right, blue 80.1%, antiquewhite 10%);
+    margin-bottom: 51px;
     margin-top: 10px;
 }
 .bootstraprating{
     background: linear-gradient(to right, blue 100%, antiquewhite 0%);
+    margin-bottom: 51px;
     margin-top: 10px;
 }
 .ooprating{
@@ -314,9 +319,99 @@ caret-color: transparent;
     width: calc(100% - 260px);
     margin-left: calc(260px + 9px);
 }
+.main > div div[class *="H"] h2{
+    border-top:12px solid rgb(56, 56, 56);
+    border-bottom:12px solid rgb(56, 56, 56) ;
+    border-left:10px solid rgb(56, 56, 56) ;
+    position: relative;
+    padding-left: 16px;
+    font-size: 48px;
+}
+.main > div div[class *="H"] h2::before{
+    content: "";
+    border-color: transparent transparent transparent rgb(56, 56, 56);
+    border-style: solid;
+    border-width: 19px;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    left: -1px;
+    top: 6px;
+}
+.about{
+    margin-top: 10px;
+}
+.about p{
+    position: relative;
+    font-size: 44px;
+    padding-bottom: 47px;
+    margin-left: 39px;
+}
+.about span{
+    left: -31px;
+    content: "";
+    height: 12px;
+    width: 12px;
+    background-color: black;
+    border-radius: 50%;
+    margin: 3px;
+    display: inline-block;
+    position: absolute;
+    top: 17px;
+}
+.info p{
+    position: relative;
+    font-size: 41px;
+    padding-bottom: 30px;
+    margin-left: 30px;
+}
+.info p::before{
+    left: -26px;
+    content: "";
+    height: 13px;
+    width: 13px;
+    background-color: black;
+    border-radius: 50%;
+    margin: 3px;
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+}
+.info span{
+    font-size: 41px;
+}
+.skills p{
+    font-size: 35px;
+}
+.skills p::before{
+    left: -22px;
+    height: 11px;
+    width: 11px;
+    top: 16px;
+}
+.skills div div div[class *=g]{
+    height: 19px;
+}
+.skills div div span{
+    height: 22px;
+    font-weight: bold;
+}
 .fotter{
     position: relative;
     z-index: 1000;
+}
+.fotter p{
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 50px;
+    margin-left: 40px;
+}
+.cva{
+    color: black;
+    font-size: 30px;
+    border: 1px rgb(56, 56, 56) solid;
+    box-shadow: 3px 3px rgb(56, 56, 56);
+    padding: 5px;
 }
 .prosec{
     display: grid;
@@ -521,13 +616,14 @@ let up = document.getElementById("up");
 up.style.display = 'none'
 
 window.onscroll = function(){
+    if (b >= 1030){ 
         if(window.scrollY >= 1507.524658203125){
          side.style.cssText = `position : absolute;
          bottom:0;
          height:969px`
         }else{
          side.style.cssText = `position : fixed;`
-        }
+        }}
         if (b >= 1030){ 
         if(window.scrollY < 400){
         up.style = `display : none`;
