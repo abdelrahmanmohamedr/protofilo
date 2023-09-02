@@ -107,8 +107,7 @@ body{
     75%{width: 300px;}
     100%{width: 250px;}
 }
-
-.main > div:not(.mimg):not(.about){
+.main > div:not(.mimg):not(.about):not(.info){
     display: none;
 }
 .main > div:not(.cer){
@@ -491,11 +490,32 @@ caret-color: transparent;
 font-size: 40px;
 z-index: 1001;
 }
-body::-webkit-scrollbar {
-    -webkit-appearance: none;
-}
 .side{
     display: none;
+}
+.about,
+.skills{
+    transform: translateX(200px);
+    opacity: 0;
+    transition-duration: 1.5s;
+    -webkit-transform: translateX(200px);
+    -moz-transform: translateX(200px);
+    -ms-transform: translateX(200px);
+    -o-transform: translateX(200px);
+    display: block;
+}
+.info{
+    transform: translateX(-200px);
+    opacity: 0;
+    transition-duration: 1.5s;
+    -webkit-transform: translateX(-200px);
+    -moz-transform: translateX(-200px);
+    -ms-transform: translateX(-200px);
+    -o-transform: translateX(-200px);
+    display: block;
+}
+.main > div:not(.mimg):not(.about):not(.info){
+    display: block;
 }
 @keyframes pop{
     0%{width: 0px;}
