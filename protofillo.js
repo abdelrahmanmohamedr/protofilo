@@ -60,24 +60,22 @@ let f = document.getElementById("fotter");
 let up = document.getElementById("up");
 let [i1,i2,i3] = document.querySelectorAll(".prosec div img");
 let [i_,ii,iii ,iv ,v ,vi] = document.querySelectorAll(".cersec div img");
+let con = document.getElementById("con")
+let bb = document.body
+let windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
 up.style.display = 'none'
 
-console.log(i1)
-
 window.onscroll = () => {
-    console.log(window.scrollY);
-    console.log(b);
 
-    if (b >= 1600) {
-        if (window.scrollY >= 3038.1064453125) {
-            side.style.cssText = `position : absolute;
-         bottom:0;
-         height:969px`;
+        if (window.scrollY + 969 < con.clientHeight ) {
+            
+         side.style.cssText = `position : fixed;`;
         } else {
-            side.style.cssText = `position : fixed;`;
+            side.style.cssText = `position : absolute;
+            bottom:0;
+            height:969px`;
         }
-    }
     if (b >= 1600) {
         if (window.scrollY < 400) {
             up.style = `display : none`;
@@ -99,30 +97,30 @@ window.onscroll = () => {
         }
     }
     if (b >= 1600) {
-        if (window.scrollY >= 135.35000610351562) {
+        if (window.scrollY >= 125.35000610351562) {
             a.style.display = "block";
             a.style.opacity = "1";
             a.style.transform = "translate(0px)";
             i.style.display = "block";
         }
-        if (window.scrollY >= 615.5) {
+        if (window.scrollY >= 449) {
             i.style.opacity = "1";
             i.style.transform = "translate(0px)";
             sk.style.display = "block";
         }
-        if (window.scrollY >= 1200.39990234375) {
+        if (window.scrollY >= 1050.39990234375) {
             sk.style.opacity = "1";
             sk.style.transform = "translate(0px)";
-            p.style.display = "grid";
+            p.style.display = "block";
         }
-        if (window.scrollY >= 2370) {
+        if (window.scrollY >= 2195) {
             p.style.opacity = "1";
             i1.style.animation = "pop 1.5s";
             i2.style.animation = "pop 1.5s";
             i3.style.animation = "pop 1.5s";
-            ce.style.display = "grid";
+            ce.style.display = "block";
         }
-        if (window.scrollY >= 2648.541015625) {
+        if (window.scrollY >= 2548.541015625) {
             ce.style.opacity = "1";
             i_.style.animation = "pop 1.5s";
             ii.style.animation = "pop 1.5s";
@@ -130,6 +128,7 @@ window.onscroll = () => {
             vi.style.animation = "pop 1.5s";
             v.style.animation = "pop 1.5s";
             iv.style.animation = "pop 1.5s";
+            f.style.display = "flex";
             f.style.opacity = "1";
         }
     } else {
@@ -147,11 +146,11 @@ window.onscroll = () => {
         if (window.scrollY >= 670) {
             sk.style.opacity = "1";
             sk.style.transform = "translate(0px)";
-            p.style.display = "grid";
+            p.style.display = "block";
         }
         if (window.scrollY >= 2300) {
             p.style.opacity = "1";
-            ce.style.display = "grid";
+            ce.style.display = "block";
         }
         if (window.scrollY >= 2648.541015625) {
             ce.style.opacity = "1";
@@ -161,6 +160,7 @@ window.onscroll = () => {
             vi.style.animation = "pop 1.5s";
             v.style.animation = "pop 1.5s";
             iv.style.animation = "pop 1.5s";
+            f.style.display = "flex";
             f.style.opacity = "1";
         }
     }
@@ -177,3 +177,25 @@ up.onclick = function(){
         
     })
 }
+// ______________________________________________________________________________________________________________________________________________________________________________
+let sm = document.getElementById("sidem");
+let ssm = document.getElementById("ssidem");
+sm.innerHTML = `<p>O</p>`
+
+sm.onclick = () => {
+    console.log(sm.innerText)
+if(sm.innerHTML === `<p>O</p>`){
+    sm.innerHTML = `<p>X</p>`
+    con.style.opacity = "1"
+    con.style.backgroundColor = "grey"
+    ssm.style.zIndex = "10000"
+    ssm.style.left = "8px"
+}else{
+    sm.innerHTML = `<p>O</p>`
+    con.style.opacity = "1"
+    con.style.backgroundColor = "white"
+    ssm.style.left = "-372px"
+}
+
+}
+

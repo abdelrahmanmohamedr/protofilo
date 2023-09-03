@@ -1,9 +1,14 @@
+*{
+    caret-color: transparent; 
+}
+
 body{
     overflow-x: hidden;
 }
 .con{
     display: flex;
     position: relative;
+    overflow-x: hidden;
 }
 
 .side{
@@ -15,7 +20,27 @@ body{
     position: fixed;
     
 }
+.ssidem{
+    width: 372px;
+    position: relative;
+    border-right: 2px rgb(56, 56, 56) solid;
+    background-color: #eee;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: -372px;
+    transform-origin: left;
+    transition-duration: .7s;
+}
 .side::before{
+    content: "";
+    background-color: rgb(56, 56, 56);
+    width: 100%;
+    height: 21px;
+    position: absolute;
+    border-top-left-radius:5px;
+}
+.ssidem::before{
     content: "";
     background-color: rgb(56, 56, 56);
     width: 100%;
@@ -106,9 +131,6 @@ body{
     0%{width: 0px;}
     75%{width: 300px;}
     100%{width: 250px;}
-}
-.main > div:not(.mimg):not(.about):not(.info){
-    display: none;
 }
 .main > div:not(.cer){
     border-bottom:3px solid black ;
@@ -321,7 +343,7 @@ body{
 .fotter{
     width:100%;
     background-color: #eee;
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
     height: 300px;
@@ -354,19 +376,52 @@ caret-color: transparent;
     background-color:rgba(95, 95, 241) ;
     transition: .5s;
 }
-@media(max-width : 1000px){
-.side{
+.cer{
+    height: 969px;
+}
+.sidem{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    right: 23px;
+    background-color: rgba(95, 95, 241, 0.5);
+    color: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+.sidem:hover{
+    background-color:rgba(95, 95, 241) ;
+    transition: .5s;
+}
+.sidem p{
+    font-size: 27px;
+}
+@media(max-width : 1400px){
+.sside{
     width: 260px;
 }
 .contact p{
     position: relative;
-    font-size: 17px;
+    font-size: 24px;
     padding-bottom: 47px;
     margin-left: 18px;
 }
 .contact span{
-    font-size: 17px;
+    font-size: 25px;
     font-weight: bold
+}
+.contact p::before {
+    height: 10px;
+    width: 10px;
+    top: 7px;
 }
 .main{
     width: calc(100%);
@@ -521,5 +576,14 @@ z-index: 1001;
     0%{width: 0px;}
     75%{width: 230px;}
     100%{width: 210px;}
+}
+.sidem{
+    display: flex;
+    height: 60px;
+    width: 60px;
+}
+.sidem p{
+    font-size: 26px;
+    font-weight: bold;
 }
 }
