@@ -196,11 +196,11 @@ if(sm.innerHTML === `<p><i class="fa fa-solid fa-bars"></i></p>`){
     ssm.style.left = "8px"
     bb.style.overflow = "hidden"
     bb.style.position = "relative"
+    bb.style.height = "100%"
     con.style.overflow = "hidden"
     con.style.position = "relative"
     ht.style.overflow = "hidden"
     ht.style.position = "relative"
-    ht.style.height = "100%"
 
 }else{
     sm.innerHTML = `<p><i class="fa fa-solid fa-bars"></i></p>`
