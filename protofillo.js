@@ -179,11 +179,13 @@ up.onclick = function(){
 // ______________________________________________________________________________________________________________________________________________________________________________
 let sm = document.getElementById("sidem");
 let ssm = document.getElementById("ssidem");
+let conn = document.getElementById("conn");
 let ht = document.documentElement
 sm.innerHTML = `<p><i class="fa fa-solid fa-bars"></i></p>`
+console.log(bb.clientWidth)
 
 sm.onclick = () => {
-    console.log(sm.innerText)
+
 if(sm.innerHTML === `<p><i class="fa fa-solid fa-bars"></i></p>`){
     sm.innerHTML = `<p>X</p>`
     con.style.opacity = "1"
@@ -195,12 +197,15 @@ if(sm.innerHTML === `<p><i class="fa fa-solid fa-bars"></i></p>`){
     i.style.backgroundColor = "grey"
     ssm.style.left = "8px"
     bb.style.overflow = "hidden"
-    bb.style.position = "relative"
-    bb.style.height = "100%"
-    con.style.overflow = "hidden"
-    con.style.position = "relative"
     ht.style.overflow = "hidden"
-    ht.style.position = "relative"
+    con.style.overflow = "hidden"
+    conn.style.height = `${bb.offsetHeight}px`
+    conn.style.width = `${bb.clientWidth}px`
+    conn.style.zIndex = `100000`
+    conn.style.position = `fixed`
+    conn.style.top = `0px`
+    sm.style.zIndex = "100001"
+
 
 }else{
     sm.innerHTML = `<p><i class="fa fa-solid fa-bars"></i></p>`
@@ -213,15 +218,9 @@ if(sm.innerHTML === `<p><i class="fa fa-solid fa-bars"></i></p>`){
     p.style.backgroundColor = "#eee"
     i.style.backgroundColor = "#eee"
     bb.style.overflowX = "hidden";
-    bb.style.overflowY = "auto";
-    bb.style.position = "static"
-    bb.style.height = "auto"
-    con.style.overflowY = "auto";
-    bb.style.position = "static"
-    bb.style.height = "auto"
-    ht.style.overflowY = "auto";
-    bb.style.position = "static"
-    bb.style.height = "auto"
+    bb.style.overflowY = "auto"
+    conn.style.height = `0px`
+    conn.style.width = `0px`
 }
 
 }
