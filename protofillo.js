@@ -194,6 +194,7 @@ if(sm.innerHTML === `<p><i class="fa fa-solid fa-bars"></i></p>`){
     i.style.backgroundColor = "grey"
     ssm.style.left = "8px"
     bb.style.overflow = "hidden"
+    con.style.overflow = "hidden"
 
 }else{
     sm.innerHTML = `<p><i class="fa fa-solid fa-bars"></i></p>`
@@ -207,6 +208,7 @@ if(sm.innerHTML === `<p><i class="fa fa-solid fa-bars"></i></p>`){
     i.style.backgroundColor = "#eee"
     bb.style.overflowX = "hidden";
     bb.style.overflowY = "auto";
+    con.style.overflowY = "auto";
 }
 
 }
