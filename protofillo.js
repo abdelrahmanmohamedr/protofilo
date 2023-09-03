@@ -179,6 +179,7 @@ up.onclick = function(){
 // ______________________________________________________________________________________________________________________________________________________________________________
 let sm = document.getElementById("sidem");
 let ssm = document.getElementById("ssidem");
+let ht = document.documentElement
 sm.innerHTML = `<p><i class="fa fa-solid fa-bars"></i></p>`
 
 sm.onclick = () => {
@@ -195,6 +196,7 @@ if(sm.innerHTML === `<p><i class="fa fa-solid fa-bars"></i></p>`){
     ssm.style.left = "8px"
     bb.style.overflow = "hidden"
     con.style.overflow = "hidden"
+    ht.style.overflow = "hidden"
 
 }else{
     sm.innerHTML = `<p><i class="fa fa-solid fa-bars"></i></p>`
@@ -209,6 +211,7 @@ if(sm.innerHTML === `<p><i class="fa fa-solid fa-bars"></i></p>`){
     bb.style.overflowX = "hidden";
     bb.style.overflowY = "auto";
     con.style.overflowY = "auto";
+    ht.style.overflowY = "auto";
 }
 
 }
