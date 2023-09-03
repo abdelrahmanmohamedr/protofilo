@@ -217,8 +217,12 @@ if(sm.innerHTML === `<p><i class="fa fa-solid fa-bars"></i></p>`){
     sk.style.backgroundColor = "white"
     p.style.backgroundColor = "#eee"
     i.style.backgroundColor = "#eee"
-    bb.style.overflowX = "hidden";
+    bb.style.overflowX = "hidden"
     bb.style.overflowY = "auto"
+    con.style.overflowX = "hidden"
+    con.style.overflowY = "auto"
+    ht.style.overflowX = "hidden"
+    ht.style.overflowY = "auto"
     conn.style.height = `0px`
     conn.style.width = `0px`
 }
