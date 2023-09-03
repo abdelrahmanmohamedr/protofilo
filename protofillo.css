@@ -108,6 +108,7 @@ body{
     transform: translateX(600px);
     opacity: 0;
     transition-duration: 1.5s;
+    transition-property: transform;
     -webkit-transform: translateX(600px);
     -moz-transform: translateX(600px);
     -ms-transform: translateX(600px);
@@ -117,6 +118,7 @@ body{
     transform: translateX(-600px);
     opacity: 0;
     transition-duration: 1.5s;
+    transition-property: transform;
     -webkit-transform: translateX(-600px);
     -moz-transform: translateX(-600px);
     -ms-transform: translateX(-600px);
@@ -125,7 +127,7 @@ body{
 .pro,
 .cer{
     opacity: 0;
-    transition-duration: 1.5s;
+    transition-property: transform;
 }
 @keyframes pop{
     0%{width: 0px;}
@@ -383,7 +385,7 @@ caret-color: transparent;
     display: none;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 23px;
     background-color: rgba(95, 95, 241, 0.5);
@@ -585,5 +587,12 @@ z-index: 1001;
 .sidem p{
     font-size: 26px;
     font-weight: bold;
+}
+.con_2{
+    display: flex;
+    position: fixed;
+    top: 0px;
+    height: 100%;
+    width: 100%;
 }
 }

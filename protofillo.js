@@ -62,7 +62,6 @@ let [i1,i2,i3] = document.querySelectorAll(".prosec div img");
 let [i_,ii,iii ,iv ,v ,vi] = document.querySelectorAll(".cersec div img");
 let con = document.getElementById("con")
 let bb = document.body
-let windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
 up.style.display = 'none'
 
@@ -180,21 +179,34 @@ up.onclick = function(){
 // ______________________________________________________________________________________________________________________________________________________________________________
 let sm = document.getElementById("sidem");
 let ssm = document.getElementById("ssidem");
-sm.innerHTML = `<p>O</p>`
+sm.innerHTML = `<p><i class="fa fa-solid fa-bars"></i></p>`
 
 sm.onclick = () => {
     console.log(sm.innerText)
-if(sm.innerHTML === `<p>O</p>`){
+if(sm.innerHTML === `<p><i class="fa fa-solid fa-bars"></i></p>`){
     sm.innerHTML = `<p>X</p>`
     con.style.opacity = "1"
     con.style.backgroundColor = "grey"
-    ssm.style.zIndex = "10000"
+    a.style.backgroundColor = "grey"
+    ce.style.backgroundColor = "grey"
+    sk.style.backgroundColor = "grey"
+    p.style.backgroundColor = "grey"
+    i.style.backgroundColor = "grey"
     ssm.style.left = "8px"
+    bb.style.overflow = "hidden"
+
 }else{
-    sm.innerHTML = `<p>O</p>`
+    sm.innerHTML = `<p><i class="fa fa-solid fa-bars"></i></p>`
     con.style.opacity = "1"
     con.style.backgroundColor = "white"
     ssm.style.left = "-372px"
+    a.style.backgroundColor = "white"
+    ce.style.backgroundColor = "white"
+    sk.style.backgroundColor = "white"
+    p.style.backgroundColor = "#eee"
+    i.style.backgroundColor = "#eee"
+    bb.style.overflowX = "hidden";
+    bb.style.overflowY = "auto";
 }
 
 }
