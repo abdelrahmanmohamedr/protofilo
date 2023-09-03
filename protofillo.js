@@ -195,8 +195,12 @@ if(sm.innerHTML === `<p><i class="fa fa-solid fa-bars"></i></p>`){
     i.style.backgroundColor = "grey"
     ssm.style.left = "8px"
     bb.style.overflow = "hidden"
+    bb.style.position = "relative"
     con.style.overflow = "hidden"
+    con.style.position = "relative"
     ht.style.overflow = "hidden"
+    ht.style.position = "relative"
+    ht.style.height = "100%"
 
 }else{
     sm.innerHTML = `<p><i class="fa fa-solid fa-bars"></i></p>`
@@ -210,8 +214,14 @@ if(sm.innerHTML === `<p><i class="fa fa-solid fa-bars"></i></p>`){
     i.style.backgroundColor = "#eee"
     bb.style.overflowX = "hidden";
     bb.style.overflowY = "auto";
+    bb.style.position = "static"
+    bb.style.height = "auto"
     con.style.overflowY = "auto";
+    bb.style.position = "static"
+    bb.style.height = "auto"
     ht.style.overflowY = "auto";
+    bb.style.position = "static"
+    bb.style.height = "auto"
 }
 
 }
