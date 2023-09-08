@@ -31,6 +31,7 @@ body{
     left: -372px;
     transform-origin: left;
     transition-duration: .7s;
+    height: 100%;
 }
 .side::before{
     content: "";
@@ -321,7 +322,7 @@ body{
     grid-template-columns: repeat(3 ,250px);
     justify-content: space-evenly;
     margin-top: 30px;
-    row-gap: 25px;
+    row-gap: 45px;
     margin-bottom: 51px;
 }
 .prosec div,
@@ -337,6 +338,7 @@ body{
     margin-bottom: 10px;
     border-radius: 50%;
 }
+
 .prosec div a,
 .cersec div a{
     font-size: 21px;
