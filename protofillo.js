@@ -58,7 +58,7 @@ let side = document.getElementById("side");
 let [img,a,i,sk,p,ce] = document.querySelectorAll(".main > div");
 let f = document.getElementById("fotter");
 let up = document.getElementById("up");
-let [i1,i2,i3] = document.querySelectorAll(".prosec div img");
+let [i1,i2,i3,i4] = document.querySelectorAll(".prosec div img");
 let [i_,ii,iii ,iv ,v ,vi] = document.querySelectorAll(".cersec div img");
 let con = document.getElementById("con")
 let bb = document.body
@@ -117,6 +117,7 @@ window.onscroll = () => {
             i1.style.animation = "pop 1.5s";
             i2.style.animation = "pop 1.5s";
             i3.style.animation = "pop 1.5s";
+            i4.style.animation = "pop 1.5s";
             ce.style.display = "block";
         }
         if (window.scrollY >= 2548.541015625) {
@@ -182,7 +183,8 @@ let ssm = document.getElementById("ssidem");
 let conn = document.getElementById("conn");
 let ht = document.documentElement
 sm.innerHTML = `<p><i class="fa fa-solid fa-bars"></i></p>`
-console.log(bb.clientWidth)
+
+
 
 sm.onclick = () => {
 
@@ -205,6 +207,8 @@ if(sm.innerHTML === `<p><i class="fa fa-solid fa-bars"></i></p>`){
     conn.style.position = `fixed`
     conn.style.top = `0px`
     sm.style.zIndex = "100001"
+    ssm.style.height = `${bb.clientHeight}px`
+    console.log(bb.clientHeight)
 
 
 }else{
